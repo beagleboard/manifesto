@@ -1,0 +1,46 @@
+;
+; MPU 9DOF Click
+; https://www.mikroe.com/mpu-9dof-click
+;
+; Copyright 2020 BeagleBoard.org Foundation
+; Copyright 2020 Texas Instruments
+;
+
+[manifest-header]
+version-major = 0
+version-minor = 2
+
+[interface-descriptor]
+vendor-string-id = 1
+product-string-id = 2
+
+[string-descriptor 1]
+string = Mikroelectronika
+
+[string-descriptor 2]
+string = MPU 9DOF Click
+
+[bundle-descriptor 1]
+class = 10
+
+[cport-descriptor 1]
+bundle = 1
+protocol = 2
+
+[cport-descriptor 2]
+bundle = 1
+protocol = 3
+
+[mikrobus-descriptor]
+num-devices = 1
+int-gpio-state = 1
+
+[device-descriptor 1]
+driver-string-id = 3
+protocol = 2
+reg = 0x68
+irq = 1
+irq-type = 1
+
+[string-descriptor 3]
+string = mpu9150
