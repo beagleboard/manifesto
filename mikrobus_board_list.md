@@ -17,6 +17,8 @@ and examples should be readily explorable in your favorite spreadsheet applicati
 The good news is that most add-on board records won't require JSON, but plenty tools make
 it easy for those that do.
 
+I need a clean reference to this: https://git.beagleboard.org/beagleboard/linux/-/blob/v5.10.168-ti-arm64-r111/include/linux/mikrobus.h?ref_type=heads
+
 ## Fields
 
 * Add-on board name: String description of official board name from the manufacturer
@@ -31,3 +33,37 @@ it easy for those that do.
   * WITH-MODIFICATONS (modifications needed) - Some modifications to hardware or software required
   * LIMITED-FEATURES (limitations) - Support has a limited feature set
   * NEEDS-TESTING (comments) - Testing has not been completed
+* KCONFIG: Config strings required to be enabled in the kernel build to include the driver, separated
+  by a vertical bar (|) if there is more than one
+* PWM Pin State: a string to represent the pin mode of the PWM pin, one of:
+  * MIKROBUS\_STATE\_INPUT
+  * MIKROBUS\_STATE\_OUTPUT\_HIGH
+  * MIKROBUS\_STATE\_OUTPUT\_LOW
+  * MIKROBUS\_STATE\_PWM
+  * MIKROBUS\_STATE\_SPI
+  * MIKROBUS\_STATE\_I2C
+  * MIKROBUS\_STATE\_UART
+* INT Pin State: same as PWM, but for the INT pin
+* RX Pin State: same as PWM, but for the RX pin
+* TX Pin State: same as PWM, but for the TX pin
+* SCL Pin State: same as PWM, but for the SCL pin
+* SDA Pin State: same as PWM, but for the SDA pin
+* COPI Pin State: same as PWM, but for the COPI pin
+* CIPO Pin State: same as PWM, but for the CIPO pin
+* SCK Pin State: same as PWM, but for the SCK pin
+* CS Pin State: same as PWM, but for the CS pin
+* RST Pin State: same as PWM, but for the RST pin
+* AN Pin State: same as PWM, but for the AN pin
+* Device Driver ID: 
+* Protocol: one of:
+   * I2C
+   * SPI
+   * UART
+   * PLATFORM
+* Reg
+* IRQ Pin
+* IRQ Type
+* SPI Max Speed
+* SPI Mode
+* Properties: How do we know when they are GPIO?
+* More Devices
